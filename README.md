@@ -12,16 +12,16 @@ This repository worked on Paraphrase Generation System for paragraph-level parap
 
 2. **Train the CPG**
    ```bash
-python train.py
+   python train.py
 
-4. **Run comparison, With OpenAI LLM:**
+3. **Run comparison, With OpenAI LLM:**
       ```bash
-export OPENAI_API_KEY='your-api-key-here'
-python compare.py
+      export OPENAI_API_KEY='your-api-key-here'
+      python compare.py
 
-6. **Generate plots**
+4. **Generate plots**
       ```bash
-python visualize.py
+      python visualize.py
 
 
 
