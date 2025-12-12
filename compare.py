@@ -82,7 +82,7 @@ def compare_generators():
     
     llm_result = llm.generate_paraphrase(TEST_SAMPLE)
     
-    print(f"✓ LLM generation complete")
+    print(f" LLM generation complete")
     print(f"  Model: {llm_result['model']}")
     print(f"  Output length: {llm_result['output_word_count']} words")
     print(f"  Length ratio: {llm_result['length_ratio']:.2%}")
