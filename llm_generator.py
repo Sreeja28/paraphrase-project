@@ -200,7 +200,7 @@ def main():
     print(f"Output Length: {result['output_word_count']} words")
     print(f"Length Ratio: {result['length_ratio']:.2%}")
     print(f"Minimum Required: {result['min_required_words']} words")
-    print(f"Constraint Met: {'✓' if result['constraint_met'] else '✗'}")
+    print(f"Constraint Met: {'yes' if result['constraint_met'] else 'no'}")
     print(f"Latency: {result['latency']:.3f} seconds")
     
     print(f"\n{'='*70}")
