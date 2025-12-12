@@ -1,3 +1,4 @@
-# paraphrase-project
+# Paraphrase-project
 
-This repository contains a complete implementation, training pipeline, and evaluation framework for a Custom Paraphrase Generator (CPG) built by fine-tuning T5, along with a comparison against an LLM-based paraphrase generator. The system is designed for paragraph-level paraphrasing (200–400 words) and enforces an 80% minimum length constraint, making it suitable for academic, professional, and long-form rewriting tasks.
+
+This repository worked on Paraphrase Generation System for paragraph-level paraphrasing (designed for inputs of 200–400 words) by implementing a Custom Paraphrase Generator (CPG) fine-tuned from T5 and a comparison pipeline against an LLM-based paraphrase generator (OpenAI gpt-3.5). The system fine-tunes a seq2seq model on multiple paraphrase datasets (PAWS, Quora, MRPC, ParaNMT), enforces a length constraint on outputs (target ≥ 80% of the input paragraph), and evaluates generated paraphrases using BLEU, ROUGE, BERTScore, SBERT semantic similarity, lexical-diversity/overlap metrics and latency. The repo includes training, inference, evaluation, visualization, and a ready-to-run comparison.
