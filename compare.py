@@ -26,17 +26,17 @@ def compare_generators():
     try:
         cpg = ParaphraseGenerator()
         cpg_available = True
-        print("✓ CPG initialized")
+        print(" CPG initialized")
     except Exception as e:
-        print(f"✗ CPG initialization failed: {e}")
+        print(f" CPG initialization failed: {e}")
         print("  Run training first: python train.py")
         cpg_available = False
     
     llm = LLMParaphraseGenerator()
-    print("✓ LLM generator initialized")
+    print(" LLM generator initialized")
     
     evaluator = ParaphraseEvaluator()
-    print("✓ Evaluator initialized")
+    print(" Evaluator initialized")
     
     # Prepare test sample
     print("\n[2/4] Preparing test sample...")
@@ -54,7 +54,7 @@ def compare_generators():
         print(f"Warning: Test sample has {word_count} words")
         print(f"Expected: {min_words}-{max_words} words")
     else:
-        print(f"✓ Test sample meets length requirements ({min_words}-{max_words} words)")
+        print(f" Test sample meets length requirements ({min_words}-{max_words} words)")
     
     results = {}
     
@@ -65,7 +65,7 @@ def compare_generators():
         
         cpg_result = cpg.generate_paraphrase(TEST_SAMPLE)
         
-        print(f"✓ CPG generation complete")
+        print(f" CPG generation complete")
         print(f"  Output length: {cpg_result['output_word_count']} words")
         print(f"  Length ratio: {cpg_result['length_ratio']:.2%}")
         print(f"  Constraint met: {'Yes' if cpg_result['constraint_met'] else 'No'}")
@@ -203,7 +203,7 @@ def compare_generators():
         
         json.dump(save_data, f, indent=2)
     
-    print(f"\n✓ Results saved to: {output_file}")
+    print(f"\n Results saved to: {output_file}")
     
     # Create summary CSV
     summary_file = RESULTS_DIR / "comparison_summary.csv"
