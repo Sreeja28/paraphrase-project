@@ -219,7 +219,7 @@ def create_radar_chart(evaluations, models):
     
     plot_file = PLOTS_DIR / "radar_comparison.png"
     plt.savefig(plot_file, dpi=300, bbox_inches='tight')
-    print(f"✓ Radar chart saved to: {plot_file}")
+    print(f" Radar chart saved to: {plot_file}")
     
     plt.close()
 
@@ -262,7 +262,7 @@ def create_summary_table():
     # Save as CSV
     table_file = RESULTS_DIR / "metrics_comparison_table.csv"
     df.to_csv(table_file, index=False)
-    print(f"✓ Comparison table saved to: {table_file}")
+    print(f" Comparison table saved to: {table_file}")
     
     # Print table
     print("\n" + "="*70)
@@ -285,7 +285,7 @@ def main():
     if data is None:
         return
     
-    print("✓ Results loaded")
+    print(" Results loaded")
     
     # Create plots
     print("\nGenerating plots...")
