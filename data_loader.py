@@ -51,9 +51,9 @@ class ParaphraseDataLoader:
                 remove_columns=quora_filtered.column_names  # Remove all original columns
             )
             datasets.append(quora_formatted)
-            print(f"✓ Loaded Quora dataset: {len(quora_formatted)} examples")
+            print(f" Loaded Quora dataset: {len(quora_formatted)} examples")
         except Exception as e:
-            print(f"✗ Could not load Quora: {e}")
+            print(f" Could not load Quora: {e}")
         
         # 3. MRPC (Microsoft Research Paraphrase Corpus)
         try:
@@ -67,9 +67,9 @@ class ParaphraseDataLoader:
                 remove_columns=mrpc_filtered.column_names  # Remove all original columns
             )
             datasets.append(mrpc_formatted)
-            print(f"✓ Loaded MRPC dataset: {len(mrpc_formatted)} examples")
+            print(f" Loaded MRPC dataset: {len(mrpc_formatted)} examples")
         except Exception as e:
-            print(f"✗ Could not load MRPC: {e}")
+            print(f" Could not load MRPC: {e}")
         # 4. ParaNMT (Synthetic paraphrase dataset) - subset
         try:
             paranmt = load_dataset("embedding-data/sentence-compression", split="train[:8000]")  # Reduced
@@ -85,10 +85,10 @@ class ParaphraseDataLoader:
                 lambda x: len(x["input_text"]) > 20 and len(x["target_text"]) > 20
             )
             datasets.append(paranmt_formatted)
-            print(f"✓ Loaded ParaNMT dataset: {len(paranmt_formatted)} examples")
+            print(f" Loaded ParaNMT dataset: {len(paranmt_formatted)} examples")
         except Exception as e:
-            print(f"✗ Could not load ParaNMT: {e}")
-            print(f"✗ Could not load ParaNMT: {e}")
+            print(f" Could not load ParaNMT: {e}")
+            print(f" Could not load ParaNMT: {e}")
         
         if not datasets:
             raise ValueError("No datasets could be loaded!")
@@ -188,8 +188,8 @@ class ParaphraseDataLoader:
             desc="Tokenizing validation data"
         )
         
-        print(f"✓ Prepared {len(tokenized_train)} training examples")
-        print(f"✓ Prepared {len(tokenized_val)} validation examples")
+        print(f" Prepared {len(tokenized_train)} training examples")
+        print(f" Prepared {len(tokenized_val)} validation examples")
         
         return tokenized_train, tokenized_val, train_dataset, val_dataset
 
