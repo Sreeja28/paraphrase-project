@@ -220,7 +220,7 @@ def compare_generators():
     df = pd.DataFrame(summary_data)
     df.to_csv(summary_file, index=False)
     
-    print(f"✓ Summary saved to: {summary_file}")
+    print(f" Summary saved to: {summary_file}")
     
     return results, evaluations
 
