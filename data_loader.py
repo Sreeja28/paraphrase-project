@@ -35,9 +35,9 @@ class ParaphraseDataLoader:
                 remove_columns=paws_filtered.column_names  # Remove all original columns
             )
             datasets.append(paws_formatted)
-            print(f"✓ Loaded PAWS dataset: {len(paws_formatted)} examples")
+            print(f" Loaded PAWS dataset: {len(paws_formatted)} examples")
         except Exception as e:
-            print(f"✗ Could not load PAWS: {e}")
+            print(f" Could not load PAWS: {e}")
         
         # 2. Quora Question Pairs
         try:
