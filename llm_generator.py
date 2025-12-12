@@ -26,7 +26,7 @@ class LLMParaphraseGenerator:
             try:
                 from openai import OpenAI
                 self.client = OpenAI(api_key=self.api_key)
-                print(f"✓ LLM initialized with model: {self.model_name}")
+                print(f" LLM initialized with model: {self.model_name}")
             except ImportError:
                 print("OpenAI package not installed. Install with: pip install openai")
             except Exception as e:
