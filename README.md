@@ -10,3 +10,18 @@ This repository worked on Paraphrase Generation System for paragraph-level parap
    pip install -r requirements.txt
    python -c "import nltk; nltk.download('punkt'); nltk.download('wordnet')"
 
+2. **Train the CPG**
+   ```bash
+python train.py
+
+4. **Run comparison, With OpenAI LLM:**
+      ```bash
+export OPENAI_API_KEY='your-api-key-here'
+python compare.py
+
+6. **Generate plots**
+      ```bash
+python visualize.py
+
+
+
