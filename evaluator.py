@@ -31,7 +31,7 @@ class ParaphraseEvaluator:
         try:
             from sentence_transformers import SentenceTransformer
             self.sentence_model = SentenceTransformer('all-MiniLM-L6-v2')
-            print("✓ Semantic similarity model loaded")
+            print(" Semantic similarity model loaded")
         except Exception as e:
             print(f"Warning: Could not load sentence transformer: {e}")
             self.sentence_model = None
@@ -40,7 +40,7 @@ class ParaphraseEvaluator:
         try:
             from bert_score import BERTScorer
             self.bert_scorer = BERTScorer(lang="en", rescale_with_baseline=True)
-            print("✓ BERTScore model loaded")
+            print(" BERTScore model loaded")
         except Exception as e:
             print(f"Warning: Could not load BERTScore: {e}")
             self.bert_scorer = None
@@ -48,7 +48,7 @@ class ParaphraseEvaluator:
         # BLEU smoothing
         self.smoothing = SmoothingFunction()
         
-        print("✓ Evaluator initialized")
+        print(" Evaluator initialized")
     
     def count_words(self, text):
         """Count words in text"""
