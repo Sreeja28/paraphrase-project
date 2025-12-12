@@ -31,13 +31,13 @@ class ParaphraseAPI:
         # Try to load CPG
         try:
             self.cpg = ParaphraseGenerator(model_path=model_path)
-            print("✓ CPG loaded")
+            print(" CPG loaded")
         except Exception as e:
             print(f"⚠️  CPG not available: {e}")
         
         # Load LLM
         self.llm = LLMParaphraseGenerator()
-        print("✓ LLM generator initialized")
+        print(" LLM generator initialized")
     
     def paraphrase(
         self,
